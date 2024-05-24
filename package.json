@@ -1,0 +1,54 @@
+{
+  "name" :"@cargosense/eslint-config",
+  "version": "0.1.0",
+  "description": "Shareable ESLint configuration.",
+  "keywords": [
+    "eslint-config",
+    "eslint",
+    "eslintconfig",
+    "javascript"
+  ],
+  "homepage": "https://github.com/CargoSense/eslint-config",
+  "bugs": "https://github.com/CargoSense/eslint-config/issues",
+  "license": "MIT",
+  "author": "CargoSense <npm@cargosense.com> (https://www.cargosense.com)",
+  "files": [
+    "index.js"
+  ],
+  "type": "module",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": "./index.js"
+  },
+  "repository": "github:CargoSense/eslint-config",
+  "scripts": {
+    "lint": "npx eslint",
+    "test": "NODE_V8_COVERAGE=coverage node --experimental-test-coverage --test"
+  },
+  "dependencies": {
+    "@eslint/js": "^9.3.0",
+    "@stylistic/eslint-plugin": "^2.1.0",
+    "eslint-plugin-array-func": "^5.0.1",
+    "eslint-plugin-jsdoc": "^48.2.6",
+    "eslint-plugin-n": "^17.7.0",
+    "eslint-plugin-regexp": "^2.6.0",
+    "eslint-plugin-sort-class-members": "^1.20.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.3.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=9"
+  },
+  "overrides": {
+    "@typescript-eslint/utils": {
+      "eslint": ">=9"
+    }
+  },
+  "engines": {
+    "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
