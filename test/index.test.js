@@ -29,6 +29,18 @@ test("loads config and invalidates incorrect syntax", async () => {
 
   const expected = [
     {
+      column: 8,
+      endColumn: 9,
+      endLine: 1,
+      fix: { range: [8, 8], text: "\n" },
+      line: 1,
+      message: "Statement inside of curly braces should be on next line.",
+      messageId: "blockSameLine",
+      nodeType: "Punctuator",
+      ruleId: "@stylistic/brace-style",
+      severity: 2,
+    },
+    {
       column: 10,
       endColumn: 26,
       endLine: 1,
@@ -49,6 +61,18 @@ test("loads config and invalidates incorrect syntax", async () => {
       messageId: "preferFlatMap",
       nodeType: null,
       ruleId: "array-func/prefer-flat-map",
+      severity: 2,
+    },
+    {
+      column: 27,
+      endColumn: 28,
+      endLine: 1,
+      fix: { range: [26, 26], text: "\n" },
+      line: 1,
+      message: "Closing curly brace should be on the same line as opening curly brace or on the line after the previous block.",
+      messageId: "singleLineClose",
+      nodeType: "Punctuator",
+      ruleId: "@stylistic/brace-style",
       severity: 2,
     },
     {
@@ -75,6 +99,6 @@ test("loads config and invalidates incorrect syntax", async () => {
     },
   ];
 
-  assert.strictEqual(errorCount, 4);
+  assert.strictEqual(errorCount, 6);
   assert.deepEqual(messages, expected);
 });
