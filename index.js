@@ -58,6 +58,13 @@ export default [
       "@stylistic/array-element-newline": ["error", "consistent"],
 
       /**
+       * Enforce consistent brace style for blocks.
+       *
+       * @see {@link https://eslint.style/rules/default/brace-style}
+       */
+      "@stylistic/brace-style": ["error", "1tbs"],
+
+      /**
        * Enforce consistent usage of line breaks between arguments of a function
        * call.
        *
