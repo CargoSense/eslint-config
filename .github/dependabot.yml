@@ -1,12 +1,18 @@
 version: 2
 
 updates:
+  - package-ecosystem: "devcontainers"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    reviewers:
+      - "CargoSense/dx-reviewers"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "monthly"
     reviewers:
-      - "CargoSense/front-end-reviewers"
+      - "CargoSense/dx-reviewers"
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
