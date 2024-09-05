@@ -69,6 +69,7 @@ test("loads config and invalidates incorrect syntax", async () => {
       endLine: 1,
       fix: { range: [26, 26], text: "\n" },
       line: 1,
+      // eslint-disable-next-line @stylistic/max-len
       message: "Closing curly brace should be on the same line as opening curly brace or on the line after the previous block.",
       messageId: "singleLineClose",
       nodeType: "Punctuator",
