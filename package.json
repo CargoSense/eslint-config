@@ -12,10 +12,10 @@
   "bugs": "https://github.com/CargoSense/eslint-config/issues",
   "license": "MIT",
   "author": "CargoSense <npm@cargosense.com> (https://www.cargosense.com)",
+  "type": "module",
   "files": [
     "index.js"
   ],
-  "type": "module",
   "exports": "./index.js",
   "repository": "https://github.com/CargoSense/eslint-config",
   "scripts": {
