@@ -20,7 +20,7 @@
     "./package.json": "./package.json",
     ".": "./index.js"
   },
-  "repository": "github:CargoSense/eslint-config",
+  "repository": "https://github.com/CargoSense/eslint-config",
   "scripts": {
     "lint": "npx eslint",
     "test": "NODE_V8_COVERAGE=coverage node --experimental-test-coverage --test"
