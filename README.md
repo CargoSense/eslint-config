@@ -4,7 +4,7 @@
 
 [![npm](https://img.shields.io/npm/v/@cargosense/eslint-config.svg?logo=npm&style=for-the-badge)](https://www.npmjs.com/package/@cargosense/eslint-config)
 [![Downloads](https://img.shields.io/npm/dt/@cargosense/eslint-config.svg?logo=npm&style=for-the-badge)](https://www.npmjs.com/package/@cargosense/eslint-config)
-[![Build](https://img.shields.io/github/actions/workflow/status/CargoSense/eslint-config/ci.yml?branch=main&logo=github&style=for-the-badge)](https://github.com/CargoSense/eslint-config/actions/workflows/ci.yml)
+[![Build](https://img.shields.io/github/actions/workflow/status/CargoSense/eslint-config/ci.yml?logo=github&style=for-the-badge)](https://github.com/CargoSense/eslint-config/actions/workflows/ci.yml)
 
 ## Installation
 
