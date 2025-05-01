@@ -77,7 +77,9 @@ test("loads config and invalidates incorrect syntax", async () => {
       severity: 2,
     },
     {
-      column: 28,
+      column: 29,
+      endColumn: 30,
+      endLine: 1,
       fix: { range: [28, 29], text: "" },
       line: 1,
       message: "Unexpected whitespace between function name and paren.",
