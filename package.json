@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@eslint/compat": "^1.2.8",
-    "@eslint/js": "^9.18.0",
+    "@eslint/js": "^9.25.1",
     "@stylistic/eslint-plugin": "^2.13.0",
     "eslint-plugin-array-func": "^5.0.2",
     "eslint-plugin-jsdoc": "^50.6.11",
@@ -33,10 +33,10 @@
     "eslint-plugin-sort-class-members": "^1.21.0"
   },
   "devDependencies": {
-    "eslint": "^9.18.0"
+    "eslint": "^9.25.1"
   },
   "peerDependencies": {
-    "eslint": ">=9.18"
+    "eslint": ">=9.25.1"
   },
   "engines": {
     "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
