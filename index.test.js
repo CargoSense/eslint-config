@@ -103,5 +103,5 @@ test("loads config and invalidates incorrect syntax", async () => {
   ];
 
   assert.strictEqual(errorCount, 6);
-  assert.deepEqual(messages, expected);
+  assert.deepStrictEqual(messages, expected);
 });
