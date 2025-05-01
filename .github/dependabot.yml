@@ -11,5 +11,10 @@ updates:
     directory: "/"
     schedule:
       interval: "monthly"
+    groups:
+      eslint-core:
+        - "@eslint/compat"
+        - "@eslint/js"
+        - "eslint"
     reviewers:
       - "CargoSense/front-end-reviewers"
