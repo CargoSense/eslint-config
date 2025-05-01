@@ -1,5 +1,4 @@
-import { cwd } from "node:process";
-import { resolve } from "node:path";
+import { fileURLToPath } from "node:url";
 
 import { includeIgnoreFile } from "@eslint/compat";
 import js from "@eslint/js";
@@ -11,11 +10,13 @@ import n from "eslint-plugin-n";
 import regexp from "eslint-plugin-regexp";
 import sortClassMembers from "eslint-plugin-sort-class-members";
 
+const gitignorePath = fileURLToPath(new URL(".gitignore", import.meta.url));
+
 export default [
   /**
    * @see {@link https://eslint.org/docs/latest/use/configure/ignore#including-gitignore-files}
    */
-  includeIgnoreFile(resolve(cwd(), ".gitignore")),
+  includeIgnoreFile(gitignorePath),
 
   /**
    * @see {@link https://www.npmjs.com/package/@eslint/js}
