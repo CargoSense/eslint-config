@@ -27,7 +27,7 @@ export default [
    * @see {@link https://eslint.style/guide/config-presets}
    * @see {@link https://eslint.style/packages/default}
    */
-  stylistic.configs["recommended-flat"],
+  stylistic.configs.recommended,
 
   /**
    * @see {@link https://www.npmjs.com/package/eslint-plugin-array-func}
@@ -154,7 +154,7 @@ export default [
        * @see {@link https://eslint.style/rules/default/quotes}
        */
       "@stylistic/quotes": ["error", "double", {
-        allowTemplateLiterals: true,
+        allowTemplateLiterals: "always",
         avoidEscape: false,
       }],
 
