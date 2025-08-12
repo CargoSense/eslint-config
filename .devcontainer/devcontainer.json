@@ -19,7 +19,6 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "EditorConfig.EditorConfig",
         "jasonnutter.vscode-codeowners"
       ]
     }
