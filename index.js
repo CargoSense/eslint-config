@@ -9,6 +9,8 @@ import sortClassMembers from "eslint-plugin-sort-class-members";
 import stylistic from "@stylistic/eslint-plugin";
 
 export default defineConfig([
+  includeIgnoreFile(resolve(".gitignore")),
+
   {
     extends: [
       "js/recommended",
@@ -16,8 +18,6 @@ export default defineConfig([
       "arrayFunc/all",
       "sortClassMembers/flat/recommended",
     ],
-
-    ...includeIgnoreFile(resolve(".gitignore")),
 
     plugins: {
       arrayFunc,
