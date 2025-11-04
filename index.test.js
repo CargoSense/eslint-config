@@ -15,7 +15,8 @@ test("default export", () => {
 });
 
 test("loads config and validates correct syntax", async () => {
-  const [{ errorCount }] = await eslint.lintText("(() => 1)();\n", {
+  const input = "(() => 1)();\n";
+  const [{ errorCount }] = await eslint.lintText(input, {
     filePath: "index.test.js",
   });
 
@@ -23,7 +24,8 @@ test("loads config and validates correct syntax", async () => {
 });
 
 test("loads config and invalidates incorrect syntax", async () => {
-  const [{ errorCount, messages }] = await eslint.lintText("(() => { [].map().flat(); }) ()\n", {
+  const input = "(() => { [].map().flat(); }) ()\n";
+  const [{ errorCount, messages }] = await eslint.lintText(input, {
     filePath: "index.test.js",
   });
 
@@ -60,7 +62,7 @@ test("loads config and invalidates incorrect syntax", async () => {
       message: "Use flatMap instead of .map().flat()",
       messageId: "preferFlatMap",
       nodeType: null,
-      ruleId: "array-func/prefer-flat-map",
+      ruleId: "arrayFunc/prefer-flat-map",
       severity: 2,
     },
     {

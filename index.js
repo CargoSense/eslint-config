@@ -1,63 +1,31 @@
-import { cwd } from "node:process";
 import { resolve } from "node:path";
 
+import { defineConfig } from "eslint/config";
 import { includeIgnoreFile } from "@eslint/compat";
-import js from "@eslint/js";
-import stylistic from "@stylistic/eslint-plugin";
 
 import arrayFunc from "eslint-plugin-array-func";
-import jsdoc from "eslint-plugin-jsdoc";
-import n from "eslint-plugin-n";
-import regexp from "eslint-plugin-regexp";
+import js from "@eslint/js";
 import sortClassMembers from "eslint-plugin-sort-class-members";
+import stylistic from "@stylistic/eslint-plugin";
 
-export default [
-  /**
-   * @see {@link https://eslint.org/docs/latest/use/configure/ignore#including-gitignore-files}
-   */
-  includeIgnoreFile(resolve(cwd(), ".gitignore")),
-
-  /**
-   * @see {@link https://www.npmjs.com/package/@eslint/js}
-   * @see {@link https://eslint.org/docs/latest/rules/}
-   */
-  js.configs.recommended,
-
-  /**
-   * @see {@link https://eslint.style/guide/config-presets}
-   * @see {@link https://eslint.style/packages/default}
-   */
-  stylistic.configs.recommended,
-
-  /**
-   * @see {@link https://www.npmjs.com/package/eslint-plugin-array-func}
-   */
-  arrayFunc.configs.all,
-
-  /**
-   * @see {@link https://www.npmjs.com/package/eslint-plugin-jsdoc}
-   */
-  jsdoc.configs["flat/recommended"],
-
-  /**
-   * @see {@link https://www.npmjs.com/package/eslint-plugin-n}
-   */
-  n.configs["flat/recommended"],
-
-  /**
-   * @see {@link https://www.npmjs.com/package/eslint-plugin-regexp}
-   */
-  regexp.configs["flat/recommended"],
-
-  /**
-   * @see {@link https://www.npmjs.com/package/eslint-plugin-sort-class-members}
-   */
-  sortClassMembers.configs["flat/recommended"],
-
-  /**
-   * @see {@link https://www.npmjs.com/package/@cargosense/eslint-config}
-   */
+export default defineConfig([
   {
+    extends: [
+      "js/recommended",
+      "stylistic/recommended",
+      "arrayFunc/all",
+      "sortClassMembers/flat/recommended",
+    ],
+
+    ...includeIgnoreFile(resolve(".gitignore")),
+
+    plugins: {
+      arrayFunc,
+      js,
+      sortClassMembers,
+      stylistic,
+    },
+
     rules: {
       /**
        * Enforce consistent line breaks between array elements.
@@ -87,7 +55,7 @@ export default [
        *
        * @see {@link https://eslint.style/rules/default/function-call-spacing}
        */
-      "@stylistic/function-call-spacing": ["error"],
+      "@stylistic/function-call-spacing": "error",
 
       /**
        * Enforce a consistent location for an arrow function containing an
@@ -98,32 +66,12 @@ export default [
       "@stylistic/implicit-arrow-linebreak": "error",
 
       /**
-       * Enforce consistent line endings independent of operating system, VCS,
-       * or editor.
-       *
-       * @see {@link https://eslint.style/rules/default/linebreak-style}
-       */
-      "@stylistic/linebreak-style": "warn",
-
-      /**
        * Enforce a maximum line length to increase code readability and
        * maintainability.
        *
        * @see {@link https://eslint.style/rules/default/max-len}
        */
-      "@stylistic/max-len": ["warn", {
-        code: 120,
-        comments: 80,
-        ignoreUrls: true,
-        tabWidth: 2,
-      }],
-
-      /**
-       * Disallow unnecessary semicolons.
-       *
-       * @see {@link https://eslint.style/rules/default/no-extra-semi}
-       */
-      "@stylistic/no-extra-semi": "error",
+      "@stylistic/max-len": ["warn", { ignoreUrls: true }],
 
       /**
        * Warns against using the arrow function syntax in places where it could
@@ -134,28 +82,20 @@ export default [
       "@stylistic/no-confusing-arrow": "warn",
 
       /**
-       * Enforce a consistent linebreak style for operators.
+       * Disallow unnecessary semicolons.
        *
-       * @see {@link https://eslint.style/rules/default/operator-linebreak}
+       * @see {@link https://eslint.style/rules/default/no-extra-semi}
        */
-      "@stylistic/operator-linebreak": ["error", "after"],
+      "@stylistic/no-extra-semi": "error",
 
       /**
-       * Disallow quotes around object literal property names that are not
-       * strictly required.
-       *
-       * @see {@link https://eslint.style/rules/default/quote-props}
-       */
-      "@stylistic/quote-props": ["error", "as-needed"],
-
-      /**
-       * Enforce the consistent use of either double quotes.
+       * Enforce the consistent use of quotes.
        *
        * @see {@link https://eslint.style/rules/default/quotes}
        */
       "@stylistic/quotes": ["error", "double", {
-        allowTemplateLiterals: "always",
-        avoidEscape: false,
+        allowTemplateLiterals: "avoidEscape",
+        avoidEscape: true,
       }],
 
       /**
@@ -166,17 +106,6 @@ export default [
       "@stylistic/semi": ["error", "always"],
 
       /**
-       * Enforce consistent spacing before function parentheses.
-       *
-       * @see {@link https://eslint.style/rules/js/space-before-function-paren}
-       */
-      "@stylistic/space-before-function-paren": ["error", {
-        anonymous: "never",
-        asyncArrow: "always",
-        named: "never",
-      }],
-
-      /**
        * Control spacing around colons of `case` and `default` clauses in switch
        * statements.
        *
@@ -185,45 +114,14 @@ export default [
       "@stylistic/switch-colon-spacing": "error",
 
       /**
-       * Sorts tags by a specified sequence according to tag name, optionally
-       * adding line breaks between tag groups.
-       *
-       * @see {@link https://github.com/gajus/eslint-plugin-jsdoc/blob/HEAD/docs/rules/sort-tags.md}
-       */
-      "jsdoc/sort-tags": ["warn", { alphabetizeExtras: true }],
-
-      /**
-       * Enforce lines (or no lines) between tags.
-       *
-       * @see {@link https://github.com/gajus/eslint-plugin-jsdoc/blob/HEAD/docs/rules/tag-lines.md}
-       */
-      "jsdoc/tag-lines": ["warn", "any", { startLines: 1 }],
-
-      /**
-       * Report unsupported Node.js built-in APIs on the configured Node.js
-       * version.
-       *
-       * @see {@link https://github.com/eslint-community/eslint-plugin-n/blob/master/docs/rules/no-unsupported-features/node-builtins.md}
-       */
-      "n/no-unsupported-features/node-builtins": ["error", { allowExperimental: true }],
-
-      /**
-       * Disallow unused variables (excluding variables whose name begins with
-       * an underscore).
-       *
-       * @see {@link https://eslint.org/docs/latest/rules/no-unused-vars}
-       */
-      "no-unused-vars": ["error", {
-        argsIgnorePattern: "^_",
-        destructuredArrayIgnorePattern: "^_",
-      }],
-
-      /**
        * Enforce sorted import declarations within modules.
        *
        * @see {@link https://eslint.org/docs/latest/rules/sort-imports}
        */
-      "sort-imports": ["error", { allowSeparatedGroups: true }],
+      "sort-imports": ["error", {
+        allowSeparatedGroups: true,
+        ignoreCase: true,
+      }],
 
       /**
        * Require object keys to be sorted.
@@ -232,9 +130,8 @@ export default [
        */
       "sort-keys": ["error", "asc", {
         allowLineSeparatedGroups: true,
-        caseSensitive: false,
         natural: true,
       }],
     },
   },
-];
+]);
