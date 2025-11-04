@@ -93,6 +93,13 @@ export default defineConfig([
       "@stylistic/no-extra-semi": "error",
 
       /**
+       * Enforce a consistent linebreak style for operators.
+       *
+       * @see {@link https://eslint.style/rules/default/operator-linebreak}
+       */
+      "@stylistic/operator-linebreak": ["error", "after"],
+
+      /**
        * Enforce the consistent use of quotes.
        *
        * @see {@link https://eslint.style/rules/default/quotes}
