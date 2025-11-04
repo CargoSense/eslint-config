@@ -71,7 +71,11 @@ export default defineConfig([
        *
        * @see {@link https://eslint.style/rules/default/max-len}
        */
-      "@stylistic/max-len": ["warn", { ignoreUrls: true }],
+      "@stylistic/max-len": ["warn", {
+        code: 120,
+        comments: 80,
+        ignoreUrls: true,
+      }],
 
       /**
        * Warns against using the arrow function syntax in places where it could
