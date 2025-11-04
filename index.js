@@ -130,6 +130,7 @@ export default defineConfig([
        */
       "sort-keys": ["error", "asc", {
         allowLineSeparatedGroups: true,
+        caseSensitive: false,
         natural: true,
       }],
     },
