@@ -1,3 +1,4 @@
-* @CargoSense/front-end-reviewers
+*   @CargoSense/front-end-reviewers
 
-/.github/ @CargoSense/dx-reviewers
+/.devcontainer/   @CargoSense/dx-reviewers
+/.github/         @CargoSense/dx-reviewers
