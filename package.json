@@ -25,7 +25,7 @@
   "dependencies": {
     "@eslint/compat": "^2.0.2",
     "@eslint/js": "^10.0.1",
-    "@stylistic/eslint-plugin": "5.7.0",
+    "@stylistic/eslint-plugin": "^5.9.0",
     "eslint-plugin-array-func": "^5.1.0",
     "eslint-plugin-sort-class-members": "^1.21.0"
   },
