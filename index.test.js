@@ -38,7 +38,7 @@ test("loads config and invalidates incorrect syntax", async () => {
       line: 1,
       message: "Statement inside of curly braces should be on next line.",
       messageId: "blockSameLine",
-      ruleId: "@stylistic/brace-style",
+      ruleId: "stylistic/brace-style",
       severity: 2,
     },
     {
@@ -48,7 +48,7 @@ test("loads config and invalidates incorrect syntax", async () => {
       line: 1,
       message: "This line has 2 statements. Maximum allowed is 1.",
       messageId: "exceed",
-      ruleId: "@stylistic/max-statements-per-line",
+      ruleId: "stylistic/max-statements-per-line",
       severity: 2,
     },
     {
@@ -68,10 +68,10 @@ test("loads config and invalidates incorrect syntax", async () => {
       endLine: 1,
       fix: { range: [26, 26], text: "\n" },
       line: 1,
-      // eslint-disable-next-line @stylistic/max-len
+      // eslint-disable-next-line stylistic/max-len
       message: "Closing curly brace should be on the same line as opening curly brace or on the line after the previous block.",
       messageId: "singleLineClose",
-      ruleId: "@stylistic/brace-style",
+      ruleId: "stylistic/brace-style",
       severity: 2,
     },
     {
@@ -82,7 +82,7 @@ test("loads config and invalidates incorrect syntax", async () => {
       line: 1,
       message: "Unexpected whitespace between function name and paren.",
       messageId: "unexpectedWhitespace",
-      ruleId: "@stylistic/function-call-spacing",
+      ruleId: "stylistic/function-call-spacing",
       severity: 2,
     },
     {
@@ -93,7 +93,7 @@ test("loads config and invalidates incorrect syntax", async () => {
       line: 1,
       message: "Missing semicolon.",
       messageId: "missingSemi",
-      ruleId: "@stylistic/semi",
+      ruleId: "stylistic/semi",
       severity: 2,
     },
   ];

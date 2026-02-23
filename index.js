@@ -32,14 +32,14 @@ export default defineConfig([
        *
        * @see {@link https://eslint.style/rules/default/array-element-newline}
        */
-      "@stylistic/array-element-newline": ["error", "consistent"],
+      "stylistic/array-element-newline": ["error", "consistent"],
 
       /**
        * Enforce consistent brace style for blocks.
        *
        * @see {@link https://eslint.style/rules/default/brace-style}
        */
-      "@stylistic/brace-style": ["error", "1tbs"],
+      "stylistic/brace-style": ["error", "1tbs"],
 
       /**
        * Enforce consistent usage of line breaks between arguments of a function
@@ -47,7 +47,7 @@ export default defineConfig([
        *
        * @see {@link https://eslint.style/rules/js/function-call-argument-newline}
        */
-      "@stylistic/function-call-argument-newline": ["error", "consistent"],
+      "stylistic/function-call-argument-newline": ["error", "consistent"],
 
       /**
        * Disallow spaces between the function name and the opening parenthesis
@@ -55,7 +55,7 @@ export default defineConfig([
        *
        * @see {@link https://eslint.style/rules/default/function-call-spacing}
        */
-      "@stylistic/function-call-spacing": "error",
+      "stylistic/function-call-spacing": "error",
 
       /**
        * Enforce a consistent location for an arrow function containing an
@@ -63,7 +63,7 @@ export default defineConfig([
        *
        * @see {@link https://eslint.style/rules/default/implicit-arrow-linebreak}
        */
-      "@stylistic/implicit-arrow-linebreak": "error",
+      "stylistic/implicit-arrow-linebreak": "error",
 
       /**
        * Enforce a maximum line length to increase code readability and
@@ -71,7 +71,7 @@ export default defineConfig([
        *
        * @see {@link https://eslint.style/rules/default/max-len}
        */
-      "@stylistic/max-len": ["warn", {
+      "stylistic/max-len": ["warn", {
         code: 120,
         comments: 80,
         ignoreUrls: true,
@@ -83,28 +83,28 @@ export default defineConfig([
        *
        * @see {@link https://eslint.style/rules/default/no-confusing-arrow}
        */
-      "@stylistic/no-confusing-arrow": "warn",
+      "stylistic/no-confusing-arrow": "warn",
 
       /**
        * Disallow unnecessary semicolons.
        *
        * @see {@link https://eslint.style/rules/default/no-extra-semi}
        */
-      "@stylistic/no-extra-semi": "error",
+      "stylistic/no-extra-semi": "error",
 
       /**
        * Enforce a consistent linebreak style for operators.
        *
        * @see {@link https://eslint.style/rules/default/operator-linebreak}
        */
-      "@stylistic/operator-linebreak": ["error", "after"],
+      "stylistic/operator-linebreak": ["error", "after"],
 
       /**
        * Enforce the consistent use of quotes.
        *
        * @see {@link https://eslint.style/rules/default/quotes}
        */
-      "@stylistic/quotes": ["error", "double", {
+      "stylistic/quotes": ["error", "double", {
         allowTemplateLiterals: "avoidEscape",
         avoidEscape: true,
       }],
@@ -114,7 +114,7 @@ export default defineConfig([
        *
        * @see {@link https://eslint.style/rules/default/semi}
        */
-      "@stylistic/semi": ["error", "always"],
+      "stylistic/semi": ["error", "always"],
 
       /**
        * Control spacing around colons of `case` and `default` clauses in switch
@@ -122,7 +122,7 @@ export default defineConfig([
        *
        * @see {@link https://eslint.style/rules/default/switch-colon-spacing}
        */
-      "@stylistic/switch-colon-spacing": "error",
+      "stylistic/switch-colon-spacing": "error",
 
       /**
        * Enforce sorted import declarations within modules.
