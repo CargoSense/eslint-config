@@ -28,6 +28,27 @@ export default defineConfig([
 
     rules: {
       /**
+       * Enforce sorted import declarations within modules.
+       *
+       * @see {@link https://eslint.org/docs/latest/rules/sort-imports}
+       */
+      "sort-imports": ["error", {
+        allowSeparatedGroups: true,
+        ignoreCase: true,
+      }],
+
+      /**
+       * Require object keys to be sorted.
+       *
+       * @see {@link https://eslint.org/docs/latest/rules/sort-keys}
+       */
+      "sort-keys": ["error", "asc", {
+        allowLineSeparatedGroups: true,
+        caseSensitive: false,
+        natural: true,
+      }],
+
+      /**
        * Enforce consistent line breaks between array elements.
        *
        * @see {@link https://eslint.style/rules/default/array-element-newline}
@@ -123,27 +144,6 @@ export default defineConfig([
        * @see {@link https://eslint.style/rules/default/switch-colon-spacing}
        */
       "stylistic/switch-colon-spacing": "error",
-
-      /**
-       * Enforce sorted import declarations within modules.
-       *
-       * @see {@link https://eslint.org/docs/latest/rules/sort-imports}
-       */
-      "sort-imports": ["error", {
-        allowSeparatedGroups: true,
-        ignoreCase: true,
-      }],
-
-      /**
-       * Require object keys to be sorted.
-       *
-       * @see {@link https://eslint.org/docs/latest/rules/sort-keys}
-       */
-      "sort-keys": ["error", "asc", {
-        allowLineSeparatedGroups: true,
-        caseSensitive: false,
-        natural: true,
-      }],
     },
   },
 ]);
