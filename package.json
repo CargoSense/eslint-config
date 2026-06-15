@@ -1,6 +1,6 @@
 {
   "name" :"@cargosense/eslint-config",
-  "version": "6.2.0",
+  "version": "6.3.0",
   "description": "Shareable ESLint configuration.",
   "keywords": [
     "eslint-config",
@@ -23,17 +23,16 @@
     "test": "NODE_V8_COVERAGE=coverage node --experimental-test-coverage --test"
   },
   "dependencies": {
-    "@eslint/compat": "^2.0.4",
     "@eslint/js": "^10.0.1",
     "@stylistic/eslint-plugin": "^5.10.0",
     "eslint-plugin-array-func": "^5.1.1",
     "eslint-plugin-sort-class-members": "^1.22.1"
   },
   "devDependencies": {
-    "eslint": "^10.2.0"
+    "eslint": "^10.5.0"
   },
   "peerDependencies": {
-    "eslint": ">=10.2.0"
+    "eslint": ">=10.5.0"
   },
   "engines": {
     "node": "^20.19.0 || ^22.13.0 || >=24"
