@@ -1,8 +1,6 @@
 import { resolve } from "node:path";
 
-import { defineConfig } from "eslint/config";
-import { includeIgnoreFile } from "@eslint/compat";
-
+import { defineConfig, includeIgnoreFile } from "@eslint/config-helpers";
 import arrayFunc from "eslint-plugin-array-func";
 import js from "@eslint/js";
 import sortClassMembers from "eslint-plugin-sort-class-members";
