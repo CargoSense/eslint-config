@@ -30,10 +30,10 @@
     "eslint-plugin-sort-class-members": "^1.22.1"
   },
   "devDependencies": {
-    "eslint": "^10.2.0"
+    "eslint": "^10.5.0"
   },
   "peerDependencies": {
-    "eslint": ">=10.2.0"
+    "eslint": ">=10.5.0"
   },
   "engines": {
     "node": "^20.19.0 || ^22.13.0 || >=24"
