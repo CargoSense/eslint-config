@@ -1,6 +1,6 @@
 {
   "name": "@cargosense/eslint-config",
-  "image": "mcr.microsoft.com/devcontainers/javascript-node:24-trixie",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:26-trixie",
   "postCreateCommand": "npm install",
   "customizations": {
     "vscode": {
